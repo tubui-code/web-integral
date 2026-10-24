@@ -113,7 +113,7 @@ class ProductService {
      */
     async getSheetDBProducts() {
         try {
-            const res = await fetch('https://sheetdb.io/api/v1/8w7yt63l6mfum');
+            const res = await fetch(import.meta.env.VITE_SHEETDB_API_URL);
             const data = await res.json();
             if (!Array.isArray(data)) return [];
 
